@@ -1,0 +1,35 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "YouTube Comment Blacklister",
+    "version": "3.0",
+    "description": "Will hide YouTube comments that contain user chosen blacklisted words.",
+    "permissions": ["storage", "activeTab", "<all_urls>"],
+
+    "browser_action": {
+        "default_popup": "popup/popup.html"
+    },
+
+    "content_scripts": [
+        {
+          "matches": ["<all_urls>"],
+          "js": ["src/experiment.js"]
+        }
+      ],
+
+    "background": {
+        "scripts": [
+          "src/background.js"
+        ],
+        "persistent": false
+      },
+
+    "icons": {
+        "16": "images/x_bubble16.png",
+        "48": "images/x_bubble48.png",
+        "128": "images/x_bubble128.png"
+    },
+
+
+    "manifest_version": 2
+  }
