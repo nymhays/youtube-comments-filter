@@ -7,6 +7,6 @@ How to use
 2. Go to chrome > settings > More Tools > Extensions.
 3. Turn developer mode on.
 4. Load the unpacked extensions
-5. Put keywords that you want to block but no more than 7 letters/characters(changeable).
+5. Put keywords that you want to block but no more than 7 letters/characters(changeable) , for example "first".
 
-This will blocked the keyword "first" every 3000ms on youtube video page.
+This will checked and blocked every comments that contain the keyword "first" every 3000ms on youtube video page.
