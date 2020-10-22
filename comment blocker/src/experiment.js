@@ -1,6 +1,9 @@
 chrome.storage.local.get('blockedWords', function (result) {
     blackListed = result.blockedWords.split(', ');
 });
+chrome.storage.local.get('maxLength', function (result) {
+    limit = result.maxLength;
+});
 function deleteComments() {
     var rootParent;
     var textBoxes = document.querySelectorAll('[id^=content-text');
@@ -22,7 +25,7 @@ function deleteComments() {
                     return;
                 };
 
-                if (textContent.includes(item.toLowerCase()) && textContent.length < 7  ) {
+                if (textContent.includes(item.toLowerCase()) && textContent.length < limit  ) {
                     rootParent.remove();
                 };
                 

@@ -11,7 +11,7 @@ html, body {
     background-color: #375B7F;
 }
 
-#blockedWords {
+#blockedWords,#maxLength {
     margin-left: 50px;
     width: 350;
 }
